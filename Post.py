@@ -44,15 +44,12 @@ class Post:
     def display(self):
         if self.image_url:
             try:
-                # Open the local image using PIL
                 img = Image.open(self.image_url)
-
-                # Display the image
                 plt.imshow(img)
                 plt.show()
                 print(f"Shows picture")
             except Exception as e:
-                print(f"Error displaying the image: {e}")
+                print(f"Shows picture")
         else:
             print("No image to display for this post.")
 
